@@ -40,34 +40,34 @@ export default function Home() {
             className="min-w-full min-h-screen"
         >
             <header
-                className='flex flex-col items-center justify-between gap-6 py-6 bg-no-repeat bg-cover'
+                className='flex flex-col items-center justify-between gap-3 py-6 bg-no-repeat bg-cover'
                 style={{ backgroundImage: `url(${bg})` }}
             >
                 <h2
-                    className='font-bold text-xl text-white'
+                    className='font-bold text-sm sm:text-xl text-white'
                 >
                     Encontre informação sobre países num só lugar
                 </h2>
 
                 <form
-                    className='flex items-center bg-white p-4 shadow rounded-lg'
+                    className='flex items-center bg-white p-2 sm:p-4 shadow rounded-lg'
                 >
                     <button><img src={searchIcon} alt="search-logo" /></button>
-                    <input ref={countriesInputRef} onChange={() => setSearchCountry(countriesInputRef.current.value)} className='px-8 border-0 border-transparent focus:border-transparent focus:border-0' placeholder='Pesquisar pais...' type="search" name="search" />
+                    <input ref={countriesInputRef} onChange={() => setSearchCountry(countriesInputRef.current.value)} className='sm:px-8 px-4 border-0 border-transparent focus:border-transparent focus:border-0' placeholder='Pesquisar pais...' type="search" name="search" />
                 </form>
             </header>
             <main
-                className='px-16 mx-auto min-w-[1100px] py-6'
+                className='sm:px-16 px-8 mx-auto max-w-[1100px] py-3 sm:py-6'
             >
                 <div
-                    className='flex justify-between items-center'
+                    className='flex flex-col sm:flex-row sm:justify-between sm:items-center'
                 >
                     <div>
                         <div
                             className='flex gap-4 py-4'
                         > <img src={filterIcon} alt="" /> <strong className='text-zinc-700'>Filtrar por Região</strong></div>
                         <ul
-                            className='flex gap-1'
+                            className='flex gap-1 overflow-x-scroll snap-mandatory scroll-p-4'
                         >
                             <li
                                 className={`text-sm text-[#363636] px-4 py-2 rounded hover:bg-gray-300 hover:font-semibold ${tab.id == 1 ? ' bg-gray-300 font-semibold' : ''}`}

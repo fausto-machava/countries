@@ -22,15 +22,15 @@ export default function CountryDesc() {
 
     return (
         <div>
-            <div className="px-12 py-8">
+            <div className="px-8 sm:px-12 py-8">
                 <strong className="block py-4">{countryDetails.name}</strong>
                 <Link to={'/'} className="text-blue-500 underline cursor-pointer">Retroceder</Link>
 
-                <div className='grid grid-cols-2 py-8 h-[250px]'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 py-4 sm:py-8 min-h-[250px]'>
                     <div className='shadow-lg'>
                         <img className='object-contain w-full h-[250px]' src={countryDetails.flag} alt="" />
                     </div>
-                    <div className='flex justify-center'>
+                    <div className='flex justify-start mt-6 sm:mt-0 sm:justify-center'>
                         <div className='grid grid-cols-2 gap-12 text-sm text-[#3C5296]'>
                             <div className='flex flex-col gap-2'>
                                 <span>Capital</span>

@@ -78,12 +78,12 @@ export default function Countries({ region, country }) {
 
     return (
         <>
-            <div className="flex justify-end gap-3 pb-6">
-                <CSVLink {...csvReport} className='px-4 py-2 text-white bg-blue-500 rounded shadow hover:bg-blue-600'> Exportar em CSV </CSVLink>
-                <CSVLink {...excelReport} className='px-4 py-2 text-white bg-blue-500 rounded shadow hover:bg-blue-600'> Exportar em XLS </CSVLink>
+            <div className="flex flex-col sm:flex-row justify-start sm:justify-end gap-3 pb-6">
+                <CSVLink {...csvReport} className='text-center px-4 py-2 text-white bg-blue-500 rounded shadow hover:bg-blue-600'> Exportar em CSV </CSVLink>
+                <CSVLink {...excelReport} className='text-center px-4 py-2 text-white bg-blue-500 rounded shadow hover:bg-blue-600'> Exportar em XLS </CSVLink>
                 <XMLExport data={countries} fileName={region} fields={fieldsAsStrings}> </XMLExport>
             </div>
-            <div className='grid grid-cols-4 gap-y-12 gap-x-12'>
+            <div className='grid grid-cols-1 sm:grid-cols-4 gap-y-12 gap-x-12'>
                 {currentPosts.map(item => {
                     return (
                         <CountryCard code={item.alpha2Code} key={item.alpha2Code} name={item.name} region={item.region} flag={item.flag} />
@@ -107,6 +107,7 @@ export default function Countries({ region, country }) {
                                 hover:bg-blue-500 
                                 hover:text-white 
                                 ${item === currentPage ? 'bg-blue-500 text-white' : 'border-blue-500 border-solid border-2 text-blue-500 bg-transparent'}
+                                ${currentPage + 1 < item || item < currentPage - 1 ? 'hidden' : ''}
                             `}
 
                             onClick={() => setCurrentPage(item)}
