@@ -1,4 +1,4 @@
-## Frontend Challange - 2iBi
+## Frontend Developer Challenge - 2iBi
 
 ## Instructions
 
