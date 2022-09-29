@@ -9,12 +9,12 @@ $ git clone https://github.com/fausto-machava/countries
 
 Install dependencies. Make sure you already have [`nodejs`](https://nodejs.org/en/) & [`npm`](https://www.npmjs.com/) installed in your system.
 ```bash
-$ npm install # or yarn
+$ npm install
 ```
 
 Run it
 ```bash
-$ npm run dev # or yarn start
+$ npm run dev
 ```
 
 ## Live Demo
