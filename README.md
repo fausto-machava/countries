@@ -18,7 +18,6 @@ $ npm run dev
 ```
 
 ## Live Demo
-
 <a href="https://countries-dun.vercel.app/" target="_blank">Live Demo Link</a>
 
 ## Author
